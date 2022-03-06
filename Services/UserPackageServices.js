@@ -72,4 +72,26 @@ exports.GetAll = catchAsync(async (req, res, next) => {
 })
 
 
+exports.Delete = catchAsync(async (req, res, next) => {
 
+
+    try {
+        const Record = await UserServicesModel.deleteOne({ "_id": req.body.Id });
+        if (Record.deletedCount == 0) {
+            return res.status(500).json({
+                success: false, message: "Error! Not found for this Id"
+            })
+        }
+
+        return res.status(200).json({
+            success: true, message: " Deleted Successfully"
+        })
+
+
+    } catch (error) {
+        return res.status(500).json({
+            success: false, message: "Error!   Not found for this Id"
+        })
+    }
+
+})

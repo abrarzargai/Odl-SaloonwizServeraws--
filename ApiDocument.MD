@@ -720,6 +720,18 @@ URL: /api/UserServices/add (Post)
 
     -Response : And you get success,message,Data
 
+
+## Delete
+URL: /api/UserServices/delete (Post)
+@Access Public
+
+    -Request :It need
+                    {
+                    "Id": (mongoDB Id of UserService)Required,
+                    }
+
+    -Response : And you get success,message,Data
+
 ## Getall
 URL: /api/UserServices/getall (Post)
 @Access Public
