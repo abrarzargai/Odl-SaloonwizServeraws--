@@ -1,6 +1,6 @@
 const KnowledgedBaseModel = require('../models/KnowledgedBaseModel');
 const catchAsync = require('../utils/catchAsync');
-const ImgBase = 'https://http://54.226.251.96/images/'
+const ImgBase = 'https://54.226.251.96/images/'
 
 /***************Services************/
 
