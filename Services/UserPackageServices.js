@@ -2,7 +2,7 @@ const UserServicesModel = require('../models/UserServices');
 const catchAsync = require('../utils/catchAsync');
 const mongoose = require('mongoose')
 const ObjectId = mongoose.Types.ObjectId;
-const ImgBase = 'https://54.226.251.96/images/'
+const ImgBase = 'http://54.226.251.96/images/'
 /***************Services************/
 
 exports.Add = catchAsync(async (req, res, next) => {
