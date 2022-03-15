@@ -4,7 +4,7 @@ const argon2 = require('argon2');
 const nodemailer = require("nodemailer");
 var jwt = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid');
-const ImgBase = 'https://odl-saloonwizz-app.herokuapp.com/images/'
+const ImgBase = 'http://54.226.251.96/images/'
 //******Generatingg token****/
 
 const signToken = (user) => {
