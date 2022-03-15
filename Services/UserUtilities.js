@@ -4,7 +4,7 @@ const UtilitiesModel = require('../models/UtilitiesModel');
 const catchAsync = require('../utils/catchAsync');
 const mongoose = require('mongoose')
 const ObjectId = mongoose.Types.ObjectId;
-const ImgBase = 'https://odl-saloonwizz-app.herokuapp.com/images/'
+const ImgBase = 'http://54.226.251.96/images/'
 /***************Services************/
 
 exports.Add = catchAsync(async (req, res, next) => {
