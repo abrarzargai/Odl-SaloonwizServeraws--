@@ -49,6 +49,32 @@ exports.Add = catchAsync(async (req, res, next) => {
   }
 });
 
+
+exports.UpdateLOAForm = catchAsync(async (req, res, next) => {
+    console.log("hit", req.files);
+  
+    const IsFound = await UserUtilitiesModel.findOne({ _id: req.body.Id });
+    console.log("IsFound", IsFound);
+    if (!IsFound) {
+      throw new Error("Error! User have not applied for this Utility");
+    }
+  
+    console.log("data");
+  
+    const Record = await UserUtilitiesModel.updateOne(
+      { _id: req.body.Id },
+     { LOAForm: ImgBase + req.files[0].filename }
+    );
+    if (!Record.nModified > 0) {
+      throw new Error("Error! User Utilities Cannot be updated");
+    } else {
+      return res.status(201).json({
+        success: true,
+        message: "User Utilities has been updated  Successfully",
+      });
+    }
+  });
+
 exports.Update = catchAsync(async (req, res, next) => {
   console.log("hit", req.files);
 
