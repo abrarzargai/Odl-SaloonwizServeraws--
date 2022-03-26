@@ -1,6 +1,6 @@
 const KnowledgedBaseModel = require('../models/KnowledgedBaseModel');
 const catchAsync = require('../utils/catchAsync');
-const ImgBase = 'https://odl-saloonwizz-app.herokuapp.com/images/'
+const ImgBase = 'http://54.226.251.96/images'
 
 /***************Services************/
 
