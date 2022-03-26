@@ -9,6 +9,8 @@ route.post('/add',
     UserUtilitiesServices.Add);
 route.post('/update',
     UserUtilitiesServices.Update);
+route.post('/UpdateLOAForm',
+    UserUtilitiesServices.UpdateLOAForm);
 route.post('/delete',
     UserUtilitiesServices.Delete);
 route.post('/getOne',
