@@ -89,7 +89,10 @@ userSchema.pre('save', async function(next) {
   next();
 })
 userSchema.pre('updateOne', async function (next) {
+  console.log
+  if(this.getUpdate().Password){
   this.getUpdate().Password = await argon2.hash(this.getUpdate().Password); 
+}
   next();
 })
 
