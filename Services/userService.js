@@ -75,7 +75,7 @@ exports.Update = catchAsync(async (req, res, next) => {
     const User = await userModel.find({ Email: req.body.Email })
     if (User[0]) {
         const Record = await userModel.update({ Email: req.body.Email }, { ...req.body,
-                                                                     ...(req.files[0] && { Image: ImgBase + req.files[0].filename }),
+                                                                     
                                                                          });
 
         if (Record.nModified > 0) {
