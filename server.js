@@ -13,7 +13,7 @@ process.on('uncaughtException', err => {
 const app = require('./app');
 
 // const database = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
- const database = process.env.DATABASE
+ const database = process.env.DATABASE || 'mongodb+srv://abrar:abrar@cluster0.xpldp.mongodb.net/ODL-Project-SaloonWizz'
 
 // Connect the database
 mongoose.connect(database, {
@@ -24,7 +24,7 @@ mongoose.connect(database, {
 }).then(con => {
     console.log('=====>>DB connection Successfully!');
     // Start the server
-    const port = process.env.PORT || 5000;
+    const port = process.env.PORT || 8080;
     app.listen(port, () => {
         console.log(`
       ################################################
