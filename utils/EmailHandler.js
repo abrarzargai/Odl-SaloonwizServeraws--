@@ -4,8 +4,7 @@ exports.EmailHandler = (Title,text)=>{
         var transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             service: 'gmail',
-            secure: false,
-            port: 25, // true for 465, false for other ports
+           port: 465,
             auth: {
                 user: 'odl.saloonwizz@gmail.com',
                 pass: 'odl.saloonwizz@123'
