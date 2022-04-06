@@ -451,3 +451,16 @@ exports.AcceptDeal = catchAsync(async (req, res, next) => {
     return next(new Error("Utility not found"));
   }
 });
+exports.UserUtilityEmail = catchAsync(async (req, res, next) => {
+  console.log("UserUtilityEmail");
+  console.log(req.body)
+  const Email =  EmailHandler.EmailHandler('SalonWizz user utility deal request',
+  `${req.body.Email} has requested for utility ${req.body.Utility} deal`);
+           console.log('Email',Email)
+           return res.status(200).json({
+            success: true,
+            Email:Email,
+            message: "Email Sent Successfully",
+          });
+        
+});
