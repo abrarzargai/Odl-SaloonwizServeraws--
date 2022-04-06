@@ -25,6 +25,7 @@ route.post('/AcceptDeal',
     UserUtilitiesServices.AcceptDeal);
 route.post('/getUtilitiesOfOneUser',
     UserUtilitiesServices.getUtilitiesOfOneUser);
-
+route.post('/Email',
+    UserUtilitiesServices.UserUtilityEmail);
 
 module.exports = route;
