@@ -4,7 +4,7 @@ const argon2 = require('argon2');
 const nodemailer = require("nodemailer");
 var jwt = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid');
-const ImgBase = 'http://54.226.251.96/images/'
+const ImgBase = 'http://54.82.234.111/images/'
 const EmailHandler = require('../utils/EmailHandler');
 //******Generatingg token****/
 
