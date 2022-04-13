@@ -1,7 +1,7 @@
 const UtilitiesModel = require('../models/UtilitiesModel');
 const catchAsync = require('../utils/catchAsync');
 // const ImgBase = 'http://localhost:8080/images/'
-const ImgBase = 'http://54.82.234.111/images/'
+const ImgBase = 'https://api.salonwizz.co.uk/images/'
 /***************Services************/
 
 exports.Add = catchAsync(async (req, res, next) => {
