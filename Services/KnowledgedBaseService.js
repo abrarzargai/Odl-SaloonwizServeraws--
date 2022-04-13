@@ -1,6 +1,6 @@
 const KnowledgedBaseModel = require('../models/KnowledgedBaseModel');
 const catchAsync = require('../utils/catchAsync');
-const ImgBase = 'http://54.82.234.111/images/'
+const ImgBase = 'https://api.salonwizz.co.uk/images/'
 
 /***************Services************/
 
