@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const ObjectId = mongoose.Types.ObjectId;
 const nodemailer = require("nodemailer");
 const EmailHandler = require('../utils/EmailHandler');
-const ImgBase = 'http://54.82.234.111/images/';
+const ImgBase = 'https://api.salonwizz.co.uk/images/';
 /***************Services************/
 
 exports.Add = catchAsync(async (req, res, next) => {
